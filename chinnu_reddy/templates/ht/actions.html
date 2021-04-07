@@ -1,0 +1,49 @@
+{% extends 'ht/header.html' %}
+{% block title %}Details{% endblock %}
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="card col-md-3 mt-3">
+<h3 class="p-3 bg-primary text-center mt-3 border rounded">Registration</h3>
+<form method="POST">
+{% csrf_token %}
+<input type="text" class="border rounded my-2 form-control"
+name="username" placeholder="usr nam">
+<input type="password"  class="border rounded my-2 form-control
+"name="password" placeholder="password">
+<input type="email" name="email" class="border rounded my-2
+form-control " placeholder="email">
+<input type="number" name="age" class="border rounded my-2
+form-control"placeholder="number">
+<input type="submit" name="" class="form-control my-2
+bg-primary"value="submit" placeholder="email" >
+
+</form>
+</div>
+<div class="card col-md-9 mt-3"><h3 class="p-3 bg-primary text-center
+mt-3 border rounded">USER DETAILS</h3>
+<table class="table table-borderless table-hover">
+<tr class="bg-dark text-light">
+<td>s.no</td>
+<td>Username</td>
+<td>Password</td>
+<td>Email</td>
+<td>Age</td>
+<td>Actions</td>
+</tr>
+{% for i in info %}
+<tr>
+<td>{{forloop.counter}}</td>
+<td>{{i.username}}</td>
+<td>{{i.password}}</td>
+<td>{{i.email}}</td>
+<td>{{i.age}}</td>
+<td><a class=" btn bg-primary rounded" href="">Update</a><a class="
+btn bg-danger rounded mx-1" href="{% url 'delete' i.id %}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</div>
+</div>
+{% endblock %}

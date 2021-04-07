@@ -1,0 +1,20 @@
+{% extends 'ht/bthome.html' %}
+{% block title %}  {% endblock %}
+{% block content %}
+ <div class = "container">
+  <div class = "card col-md-6 mx-auto mt-5 shadow-lg">
+  <div class="card-body"></div>
+  <h3 class="bg-success text-light p-3 text-center border rounded">Register</h3>
+  <form method="POST">
+    {% csrf_token %}
+  <input type="text" name="fname" placeholder="Enter your firstname *" id="fname" class="form-control my-2">
+  <input type="text" name="lname" placeholder="Enter your lastname *" id="lname" class="form-control my-2">
+  <input type="text" name="age" placeholder="Age" id="age" class="form-control my-2">
+  <input type="email" name="email" placeholder="Mail-id" id="email" class="form-control my-2">
+  <input type="password" name="pwd" placeholder="Enter your password *" id="pwd" class="form-control my-2">
+  <input type="password" name="pwd1" placeholder="confirm your password" id="pwd1" class="form-control my-2">
+  <input type="submit" value = "Register" class="btn btn-primary btn-block my-2">
+  </form>
+  </div>
+ </div>
+{% endblock %}

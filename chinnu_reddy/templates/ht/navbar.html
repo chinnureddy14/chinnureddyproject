@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Aits_django_projects</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'registration' %}">registration</a>
+      </li>  
+     <li class="nav-item">
+        <a class="nav-link" href="{% url 'cr' %}">Crud operation</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'dff' %}">Dynamic Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'show' %}">Show data</a>
+      </li>          
+    </ul>
+  </div>  
+</nav>    
